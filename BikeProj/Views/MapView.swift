@@ -10,6 +10,8 @@ import SwiftUI
 
 struct MapView: View {
          @State var animation = true
+        @ObservedObject var viewRouter: ViewRouter
+
          
  var body: some View {
      VStack(spacing: 20) {
@@ -38,6 +40,6 @@ struct MapView: View {
 }
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(viewRouter: ViewRouter())
     }
 }

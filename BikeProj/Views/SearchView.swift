@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct SearchView: View {
+    @ObservedObject var viewRouter: ViewRouter
+
     var body: some View {
         Text("SearchView")
     }
@@ -16,6 +18,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(viewRouter: ViewRouter())
     }
 }

@@ -15,36 +15,50 @@ struct ContentView: View {
     }
     
     @State var selected = 0
-    
+    @State var showSplash = true
+
     var body: some View {
+        
         TabView(selection: $selected) {
            
-            HomeView().tabItem({
+            HomeView(viewRouter: ViewRouter()).tabItem({
                 Image(systemName: Constants.TabBarImageName.tabBar0)
                     .font(.title)
                 Text("\(Constants.TabBarText.tabBar0)")
-            }).tag(0)
+            })
             
-            MapView().tabItem({
+            MapView(viewRouter: ViewRouter()).tabItem({
                 Image(systemName: Constants.TabBarImageName.tabBar1)
                     .font(.title)
                 Text("\(Constants.TabBarText.tabBar1)")
-            }).tag(1)
+            })
             
-            SearchView().tabItem({
+            SearchView(viewRouter: ViewRouter()).tabItem({
                 Image(systemName: Constants.TabBarImageName.tabBar2)
                     .font(.title)
                 Text("\(Constants.TabBarText.tabBar2)")
-            }).tag(2)
+            })
             
-            SettingsView().tabItem({
+            SettingsView(viewRouter: ViewRouter()).tabItem({
                 Image(systemName: Constants.TabBarImageName.tabBar3)
                     .font(.title)
                 Text("\(Constants.TabBarText.tabBar3)")
-            }).tag(3)
+            })
         }.accentColor(Color.red)
+        
+//        SplashScreen()
+//               .opacity(showSplash ? 1 : 0)
+//               .onAppear {
+//                 DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//                   SplashScreen.shouldAnimate = false
+//                   withAnimation() {
+//                     self.showSplash = false
+//                   }
+//                 }
+//             }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

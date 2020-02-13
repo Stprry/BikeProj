@@ -18,6 +18,11 @@
 		7B2EF59023EDB83B0029AA57 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2EF58F23EDB83B0029AA57 /* SearchView.swift */; };
 		7B2EF59223EDB8490029AA57 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2EF59123EDB8490029AA57 /* SettingsView.swift */; };
 		7B2EF59423EDC06C0029AA57 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2EF59323EDC06C0029AA57 /* HomeView.swift */; };
+		7BBB8FF723F43FD70067FB4F /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB8FF623F43FD70067FB4F /* LaunchView.swift */; };
+		7BBB8FFD23F454AF0067FB4F /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB8FFC23F454AF0067FB4F /* SplashScreen.swift */; };
+		7BBB8FFF23F488700067FB4F /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB8FFE23F488700067FB4F /* MotherView.swift */; };
+		7BBB900123F48E6D0067FB4F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB900023F48E6D0067FB4F /* RegisterView.swift */; };
+		7BBB900323F5694B0067FB4F /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB900223F5694B0067FB4F /* ViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		7B2EF58F23EDB83B0029AA57 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7B2EF59123EDB8490029AA57 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7B2EF59323EDC06C0029AA57 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7BBB8FF623F43FD70067FB4F /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		7BBB8FFC23F454AF0067FB4F /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashScreen.swift; path = "../../../../Downloads/Fuber/Fuber-Starter/Fuber/SplashScreen.swift"; sourceTree = "<group>"; };
+		7BBB8FFE23F488700067FB4F /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		7BBB900023F48E6D0067FB4F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		7BBB900223F5694B0067FB4F /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +100,10 @@
 		7B2EF58B23EDB7490029AA57 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				7BBB8FFC23F454AF0067FB4F /* SplashScreen.swift */,
 				7B2EF58923EDB7310029AA57 /* Constants.swift */,
+				7BBB8FFE23F488700067FB4F /* MotherView.swift */,
+				7BBB900223F5694B0067FB4F /* ViewRouter.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -102,6 +115,8 @@
 				7B2EF58F23EDB83B0029AA57 /* SearchView.swift */,
 				7B2EF59123EDB8490029AA57 /* SettingsView.swift */,
 				7B2EF59323EDC06C0029AA57 /* HomeView.swift */,
+				7BBB8FF623F43FD70067FB4F /* LaunchView.swift */,
+				7BBB900023F48E6D0067FB4F /* RegisterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,10 +195,15 @@
 				7B2EF59223EDB8490029AA57 /* SettingsView.swift in Sources */,
 				7B2EF57623EDB3CB0029AA57 /* AppDelegate.swift in Sources */,
 				7B2EF57823EDB3CB0029AA57 /* SceneDelegate.swift in Sources */,
+				7BBB900323F5694B0067FB4F /* ViewRouter.swift in Sources */,
 				7B2EF58E23EDB81F0029AA57 /* MapView.swift in Sources */,
 				7B2EF57A23EDB3CB0029AA57 /* ContentView.swift in Sources */,
 				7B2EF59423EDC06C0029AA57 /* HomeView.swift in Sources */,
+				7BBB8FFF23F488700067FB4F /* MotherView.swift in Sources */,
+				7BBB8FFD23F454AF0067FB4F /* SplashScreen.swift in Sources */,
 				7B2EF59023EDB83B0029AA57 /* SearchView.swift in Sources */,
+				7BBB900123F48E6D0067FB4F /* RegisterView.swift in Sources */,
+				7BBB8FF723F43FD70067FB4F /* LaunchView.swift in Sources */,
 				7B2EF58A23EDB7310029AA57 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

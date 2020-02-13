@@ -8,25 +8,59 @@
 
 import SwiftUI
 
-struct HomeView: View {
-   @State var animation = true
-   
-   var body: some View {
-       VStack {
-           Text("Home View Freinds Upcoming Rides")
-               .font(.largeTitle)
-               .fontWeight(.heavy)
-        
-        GroupBox(label: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label@*/Text("Label")/*@END_MENU_TOKEN@*/) {
-            /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
+struct ImgView: View {
+    let imageNames = ["home1", "home2","home3","home4"]
+
+    var body: some View {
+        List(imageNames, id: \.self) { image in
+            Image(image).resizable().frame(width: 140.0, height: 145.0)
+            Text(image)
+             .font(.subheadline)
+             .fontWeight(.heavy)
+            
+            Text("Test Bio")
+             .fontWeight(.ultraLight)
+             .font(.body)
         }
-           
-       }.padding(.horizontal, 20)
-   }
+    }
+}
+
+
+struct HomeView: View {
+   @State var myRides = false
+   @ObservedObject var viewRouter: ViewRouter
+
+    var body: some View {
+       VStack {
+        
+       Button(action: {
+        self.viewRouter.currentPage = "page1"
+        }) {
+            Text("Log In / Register")
+        }
+            
+           Text("(Home View) Freinds Upcoming Rides")
+            .font(.callout)
+               .fontWeight(.heavy)
+        ZStack(alignment:.bottomTrailing){
+            Toggle(isOn: $myRides) {
+                Spacer()
+                Text("My Upcoming Rides")
+                if (myRides == true){
+                    // do stuff
+                }
+            }
+        }
+        ScrollView (.horizontal){
+            Text("Your Upcoming rides")
+            ImgView()
+        }
+    }.padding(.horizontal, 20)
+  }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewRouter: ViewRouter())
     }
 }
